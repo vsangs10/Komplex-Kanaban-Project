@@ -38,13 +38,8 @@ double imag(Complex com) {
 }
 
 //ARITHMETIC LIBRARY FUNCTIONS
-//absol
-double abs(Complex com) {
-  return sqrt((com.real)*(com.real) + (com.imaginary)*(com.imaginary));
-}
+//magnitude = a^2 + b^2
+double norm()
 
-double arg(Complex com) {
-  
-}
 
 //COMPLEX MATH AND TRIG FUNCTIONS
