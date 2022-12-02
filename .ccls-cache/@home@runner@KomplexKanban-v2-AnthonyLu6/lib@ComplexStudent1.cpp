@@ -21,6 +21,4 @@ Complex::Complex()
 }
 
 // - - - - - Other Functions Follow - - - - - - - - - - - -
-double imag(const complex&){
-  
-}
+double imag(const complex&)
