@@ -75,8 +75,10 @@ class Complex {
     friend Complex conj(Complex);
     friend double norm(Complex);
     friend Complex polar(double, double);
-  
-  
+    friend Complex tan(const Complex);
+    friend Complex tanh(const Complex);
+    friend Complex cos(const Complex);
+    friend Complex sin(const Complex);
   
   
 };// Complex class declaration
