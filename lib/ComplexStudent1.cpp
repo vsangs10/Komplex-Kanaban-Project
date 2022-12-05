@@ -15,7 +15,7 @@ Modified : Dec. 11th
 #define PI 3.1415926538979323846
 #define EULER 2.71828182845904523536
 
-Complex::Complex() 
+/* Complex::Complex() 
 {
   // Constructor code
   real = 0.0;
@@ -27,7 +27,7 @@ Complex::Complex(double re, double im)
   // Constructor code
   real = re;
   imaginary = im;
-} 
+} */
 // - - - - - Other Functions Follow - - - - - - - - - - - - (https://docs.google.com/document/d/1jOSBSdjnHwtfYxM3yntPkhqkaBimNBSI7-og9L94l84/edit)
 double real(Complex com) {
   return com.real; 
@@ -73,8 +73,44 @@ Complex cos(Complex com) {
   Complex *c = new Complex(com.real/h, 0);
   return *c;
 }
-Complex tanh(Complex com) {
-  
+
+double sinh(double n) {
+  double x = 1;
+  for (int i = 0; i < n; i++) {
+    x *= EULER;
+  }
+  return ((x - (1/x)) / 2);
 }
 
+double cosh(double n){
+  double x = 1;
+  for (int i = 0; i < n; i++) {
+    x *= EULER;
+  }
+  return ((x + (1/x)) / 2);
+}
+
+Complex cosh(Complex com){
+  Complex *c = new Complex(cosh(com.real) * cos(com.imaginary), sinh(com.real) * sin(com.imaginary));
+  return *c;
+}
+
+Complex sinh(Complex com) {
+  Complex *c = new Complex(sinh(com.real) * cos(com.imaginary), cosh(com.real) * sin(com.imaginary));
+  return *c;
+}
+
+Complex tanh(Complex com) {
+  double a = sinh(com).real;
+  double b = sinh(com).imaginary;
+  double c = cosh(com).real;
+  double d = cosh(com).imaginary;
+  Complex *x = new Complex((a*c + b*d) / (c*c + d*d), (b*c - a*d)/(c*c + d*d));
+  return *x;
+}
+
+Complex atan(Complex com) {
+  Complex *c = new Complex(atan(com.imaginary / com.real), 0);
+  return *c;
+}
 //COMPLEX MATH AND TRIG FUNCTIONS

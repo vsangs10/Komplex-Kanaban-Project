@@ -79,6 +79,8 @@ class Complex {
     friend Complex tanh(const Complex);
     friend Complex cos(const Complex);
     friend Complex sin(const Complex);
-  
+    friend double cosh(const double);
+    friend double sinh(const double);
+    friend Complex atan(const Complex);
   
 };// Complex class declaration
