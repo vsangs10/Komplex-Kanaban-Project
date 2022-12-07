@@ -62,7 +62,10 @@ Complex polar(double mag, double ang=0.0) {
 }
 
 Complex log(Complex com) {
-  
+  Complex *c = new Complex(); 
+  c->real = log(abs(com));
+  c->imaginary = arg(com);
+  return *c;
 }
 
 
