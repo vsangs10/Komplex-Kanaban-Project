@@ -56,6 +56,15 @@ Complex conj(Complex com) {
 
 Complex polar(double mag, double ang=0.0) {
   Complex *c = new Complex(); 
+  c->real = sqrt((mag)/(1+(tan(ang)*tan(ang))));
+  c->imaginary = tan(ang)*(c->real);
+  return *c;
 }
+
+Complex log(Complex com) {
+  
+}
+
+
 
 //COMPLEX MATH AND TRIG FUNCTIONS
