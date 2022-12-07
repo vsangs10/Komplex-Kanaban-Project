@@ -113,4 +113,11 @@ Complex atan(Complex com) {
   Complex *c = new Complex(atan(com.imaginary / com.real), 0);
   return *c;
 }
+
+Complex log10(Complex com) {
+  double real2 = log(com).real; 
+  double img2 = log(com).imaginary + atan(com);
+  Complex *c = new Complex(real2, img2);
+  return *c;
+}
 //COMPLEX MATH AND TRIG FUNCTIONS
