@@ -1,9 +1,3 @@
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Codespaces
-
 /*
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 Title : Complex
@@ -43,7 +37,7 @@ class Complex {
      * Returns the imaginary part of complex number
      * @param com The complex number to find the real part of
      * @return complex.imaginary
-     * @author Vedant Sangani, George Yu, Ted Gershon, Anthony Lu, Vishwa Kumaravel
+     * @author Anthony Lu
      */
     friend double imag(Complex);
   
@@ -57,15 +51,16 @@ class Complex {
      * Returns the absolute value (sqrt(a^2+b^2)) of com
      * @param com the complex number to find the absolute value of
      * @return the absolute value of com
-     * @author Vedant Sangani, George Yu, Ted Gershon, Anthony Lu, Vishwa Kumaravel
+     * @author George Yu
      */
-    friend double abs(Complex);
-    friend double arg(Complex);
-    friend Complex conj(Complex);
     friend double norm(Complex);
-    friend Complex polar(double mag, double ang=0.0);
-  
-  
+    friend Complex exp(Complex);
+    friend Complex sqrt(Complex);
+    friend Complex pow(double, Complex);
+    friend Complex pow(Complex, int);
+    friend Complex pow(Complex, double);
+    friend Complex pow(Complex, Complex);
+
   
   
 } // Complex class declaration
