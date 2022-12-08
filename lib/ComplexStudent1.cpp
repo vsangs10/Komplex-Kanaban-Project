@@ -59,18 +59,15 @@ Complex polar(double mag, double ang=0.0) {
 }
 
 Complex tan(Complex com) {
-  Complex *c = new Complex(com.imaginary/com.real, 0);
-  return *c;
+  Complex *c = new Complex(sin(2* com.real) / (cosh(2 * com.imaginary) + cos(2* com.real)), sinh(2 * com.imaginary) / (cosh(2 * com.imaginary) + cos(2* com.real));
 }
 
 Complex sin(Complex com){
-  double h = sqrt((com.imaginary * com.imaginary) + (com.real * com.real));
-  Complex *c = new Complex(com.imaginary/h, 0);
+  Complex *c = new Complex(sin(com.real) * cosh(com.imaginary), cos(com.real) * sinh(com.imaginary));
   return *c;
 }
 Complex cos(Complex com) {
-  double h = sqrt((com.imaginary * com.imaginary) + (com.real * com.real));
-  Complex *c = new Complex(com.real/h, 0);
+  Complex *c = new Complex(cos(com.real) * cosh(com.imaginary), -1 * sin(com.real) * sinh(com.imaginary));
   return *c;
 }
 
@@ -110,7 +107,10 @@ Complex tanh(Complex com) {
 }
 
 Complex atan(Complex com) {
-  Complex *c = new Complex(atan(com.imaginary / com.real), 0);
+  Complex *top = new Complex(1 - com.imaginary, com.real);
+  Complex *bottom = new Complex(1 + com.imaginary, -1 * com.real);
+  Complex *l = log(*top) - log(*bottom);
+  Complex *c = new Complex(.5 * l->imaginary, -.5 * l->real);
   return *c;
 }
 
