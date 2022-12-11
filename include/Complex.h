@@ -8,7 +8,8 @@ Codespaces
 /*
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 Title : Complex
-Author : George Yue
+Author : Anthony, George, Vedant, Ted, Vishwa
+
 URL : NA
 Description : The complex class for complex numbers, and the functions that can be used upon them
 Created : Nov. 28th
@@ -58,6 +59,7 @@ class Complex {
      */
     friend double imag(Complex);
 
+
     Complex operator+(Complex);
     Complex operator-(Complex);
     Complex operator*(Complex);
@@ -79,9 +81,15 @@ class Complex {
     friend Complex conj(Complex);
     friend double norm(Complex);
     friend Complex polar(double, double);
-    friend Complex log(Complex);
+    friend Complex tan(const Complex);
+    friend Complex tanh(const Complex);
+    friend Complex cos(const Complex);
+    friend Complex sin(const Complex);
+    friend double cosh(const double);
+    friend double sinh(const double);
+    friend Complex atan(const Complex);
+    friend Complex log10(const Complex);
+    friend Complex log(const Complex);
     friend Complex acos(Complex);
-  
-  
-  
+    
 };// Complex class declaration
