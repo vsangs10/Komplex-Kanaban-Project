@@ -8,7 +8,8 @@ Codespaces
 /*
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 Title : Complex
-Author : Anthony
+Author : Anthony, George, Vedant, Ted, Vishwa
+
 URL : NA
 Description : The complex class for complex numbers, and the functions that can be used upon them
 Created : Nov. 28th
@@ -57,7 +58,12 @@ class Complex {
      * @author George Yue
      */
     friend double imag(Complex);
-  
+
+
+    Complex operator+(Complex);
+    Complex operator-(Complex);
+    Complex operator*(Complex);
+    Complex operator/(Complex);
   
   
   
@@ -84,4 +90,6 @@ class Complex {
     friend Complex atan(const Complex);
     friend Complex log10(const Complex);
     friend Complex log(const Complex);
+    friend Complex acos(Complex);
+    
 };// Complex class declaration
