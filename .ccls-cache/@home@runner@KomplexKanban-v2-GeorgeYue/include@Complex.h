@@ -57,7 +57,11 @@ class Complex {
      * @author George Yue
      */
     friend double imag(Complex);
-  
+
+    Complex operator+(Complex);
+    Complex operator-(Complex);
+    Complex operator*(Complex);
+    Complex operator/(Complex);
   
   
   
@@ -75,7 +79,8 @@ class Complex {
     friend Complex conj(Complex);
     friend double norm(Complex);
     friend Complex polar(double, double);
-  
+    friend Complex log(Complex);
+    friend Complex acos(Complex);
   
   
   

@@ -28,6 +28,36 @@ Modified : Dec. 11th
   real = re;
   imaginary = im;
 } */
+
+// - - - - - Operators - - - - - - - - - - - - 
+Complex Complex::operator+(Complex com) {
+  Complex c; 
+  c.real = this->real + com.real;
+  c.imaginary = this->imaginary + com.imaginary;
+  return c;
+}
+
+Complex Complex::operator-(Complex com) {
+  Complex c; 
+  c.real = this->real - com.real;
+  c.imaginary = this->imaginary - com.imaginary;
+  return c;
+}
+
+Complex Complex::operator*(Complex com) {
+  Complex c; 
+  c.real = this->real*com.real - this->imaginary*com.imaginary;
+  c.imaginary = this->real*com.imaginary + this->imaginary*com.real;
+  return c;
+}
+
+Complex Complex::operator/(Complex com) {
+  Complex c; 
+  c.real = (this->real*com.real + this->imaginary*com.imaginary)/(com.real*com.real + com.imaginary*com.imaginary);
+  c.imaginary = (this->imaginary*com.real - this->real*com.imaginary)/(com.real*com.real + com.imaginary*com.imaginary);
+  return c;
+}
+
 // - - - - - Other Functions Follow - - - - - - - - - - - - (https://docs.google.com/document/d/1jOSBSdjnHwtfYxM3yntPkhqkaBimNBSI7-og9L94l84/edit)
 double real(Complex com) {
   return com.real; 
@@ -66,6 +96,10 @@ Complex log(Complex com) {
   c->real = log(abs(com));
   c->imaginary = arg(com);
   return *c;
+}
+
+Complex acos(Complex com) {
+  
 }
 
 
