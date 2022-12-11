@@ -56,6 +56,16 @@ Complex conj(Complex com) {
 
 Complex polar(double mag, double ang=0.0) {
   Complex *c = new Complex(); 
+  c->real = sqrt((mag)/(1+(tan(ang)*tan(ang))));
+  c->imaginary = tan(ang)*(c->real);
+  return *c;
+}
+
+Complex log(Complex com) {
+  Complex *c = new Complex(); 
+  c->real = log(abs(com));
+  c->imaginary = arg(com);
+  return *c;
 }
 
 Complex tan(Complex com) {
@@ -110,14 +120,14 @@ Complex tanh(Complex com) {
 Complex atan(Complex com) {
   Complex *top = new Complex(1 - com.imaginary, com.real);
   Complex *bottom = new Complex(1 + com.imaginary, -1 * com.real);
-  Complex *l = log(*top) - log(*bottom);
+  Complex *l = new Complex(log(*top).real - log(*bottom).real, log(*top).imaginary - log(*bottom).imaginary);
   Complex *c = new Complex(.5 * l->imaginary, -.5 * l->real);
   return *c;
 }
 
 Complex log10(Complex com) {
-  double real2 = log(com).real; 
-  double img2 = log(com).imaginary + atan(com);
+  double real2 = log(abs(com)); 
+  double img2 = arg(com);
   Complex *c = new Complex(real2, img2);
   return *c;
 }

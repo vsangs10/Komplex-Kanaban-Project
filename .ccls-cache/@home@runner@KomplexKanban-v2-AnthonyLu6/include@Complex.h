@@ -83,4 +83,5 @@ class Complex {
     friend double sinh(const double);
     friend Complex atan(const Complex);
     friend Complex log10(const Complex);
+    friend Complex log(const Complex);
 };// Complex class declaration
