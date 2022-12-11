@@ -92,4 +92,12 @@ class Complex {
     friend Complex log(const Complex);
     friend Complex acos(Complex);
     
+    friend double norm(Complex);
+    friend Complex exp(Complex);
+    friend Complex sqrt(Complex);
+    friend Complex pow(double, Complex);
+    friend Complex pow(Complex, int);
+    friend Complex pow(Complex, double);
+    friend Complex pow(Complex, Complex);
+    
 };// Complex class declaration
