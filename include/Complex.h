@@ -61,11 +61,17 @@ class Complex {
 
 
     Complex operator+(Complex);
+    Complex operator+=(Complex);
     Complex operator-(Complex);
+    Complex operator-=(Complex);
     Complex operator*(Complex);
+    Complex operator*=(Complex);
     Complex operator/(Complex);
-  
-  
+    Complex operator/=(Complex);
+    bool operator==(Complex);
+    bool operator!=(Complex);
+    friend ostream& operator<<(ostream& out, Complex& com);
+    friend istream& operator>>(istream& in, Complex& com);
   
   
       //------------------------------------- ARITHMETIC LIBRARY FUNCTIONS -------------------------------------------
