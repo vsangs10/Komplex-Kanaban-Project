@@ -1,12 +1,8 @@
-#include <cmath>
 #include "../include/Complex.h"
+#include <cmath>
 
-//mathematic theory sourced from https://www.ncl.ac.uk/webtemplate/ask-assets/external/maths-resources/images/Expo_form_complx_num.pdf
+//Computes e^c, where e is the base of the natural logarithms, and c is the argument given to exp
 Complex exp(const Complex c) {
-  double re = c.real;
-  double im = c.imag;
-  Complex newC;
-  newC.real = pow(EULER, re)*cos(im);
-  newC.imag = pow(EULER, re)*sin(im);
+  Complex newC(pow(EULER, real(c))*cos(imag(c)), pow(EULER, real(c))*sin(imag(c)));
   return newC;
 }
