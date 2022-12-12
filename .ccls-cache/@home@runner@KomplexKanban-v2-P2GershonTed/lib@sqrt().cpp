@@ -1,6 +1,7 @@
 #include <cmath>
 
-Complex sqrt(const Complex c){
-  Complex newC(pow(c.real, 0.5), pow(c.imag, 0.5));
+//Returns the square root of its argument
+Complex sqrt(const Complex c) {
+  Complex newC(pow(abs(c), 0.5)*cos(0.5*arg(c)), pow(abs(c), 0.5)*sin(0.5*arg(c)));
   return newC;
 }
