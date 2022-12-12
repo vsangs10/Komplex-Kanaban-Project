@@ -2,10 +2,7 @@
 #include "../include/Complex.h"
 
 double cosh(double n){
-  double x = 1;
-  for (int i = 0; i < n; i++) {
-    x *= EULER;
-  }
+  double x = pow(EULER,n);
   return ((x + (1/x)) / 2);
 }
 

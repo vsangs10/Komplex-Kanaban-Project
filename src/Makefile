@@ -7,8 +7,7 @@ override CXXFLAGS += -g -Wno-everything
 
 SRCS := $(wildcard *.cpp)
 SRCS := $(wildcard "../lib/*.cpp", $(SRCS))
-HEADERS := $(wildcard *.h*)
-HEADERS := $(wildcard '../lib/*.h*', $(HEADERS))
+HEADERS := $(wildcard '../lib/*.h*')
 HEADERS := $(wildcard '../include/*.h*', $(HEADERS))
 
 $(info HEADERS is $(HEADERS))
