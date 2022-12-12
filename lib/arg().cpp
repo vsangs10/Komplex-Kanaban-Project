@@ -2,5 +2,5 @@
 #include "../include/Complex.h"
 
 double arg(Complex com) {
-  return atan((com.imaginary)/(com.real));
+  return atan((imag(com))/(real(com)));
 }
